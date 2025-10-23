@@ -1,0 +1,51 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>io.github.tanhuang2016.redisfx-idea</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>RedisFX</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="corleone_4ever@163.com" url="https://github.com/tanhuang2016">TanHuang</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+    <div>
+        <h2>Warning/警告: </h2>
+        <div>Due to the change in password persistence in beta-0.9.0, the password will be erased after upgrading, so you need to backup your password before upgrading from beta-0.8.0 and earlier to beta-0.9.0 and later.</div>
+        <div>由于 beta-0.9.0 版本修改了密码的持久化方式, 升级后密码会被清除, 所以从 beta-0.8.0 及其之前的版本升级到 beta-0.9.0 及其之后版本之前需要备份密码</div>
+    </div>
+    <br>
+    <div>
+        A simple and open source IntelliJ-based Redis plugin
+    </div>
+    <div style="white-space:normal; word-break:break-all; width:100%">
+        <ul>
+            <li>Convenient management of Redis connections</li>
+            <li>Display DB and number of keys</li>
+            <li>Filtering and grouping of keys</li>
+            <li>Support adding, modifying and deleting keys and value</li>
+            <li>Support displaying String, List, Set, ZSet, Hash data formats</li>
+            <li>The value can be formatted as JSON, XML, HTML for display</li>
+        </ul>
+    </div>
+    <br>
+    If you have any suggestions, questions or bugs about this plugin,
+    please issue them on <a href="https://github.com/MattMin/a-redis">Github</a>,
+    and if you like this plugin, just click the star on <a href="https://github.com/MattMin/a-redis">Github</a> to show your support.
+    ]]></description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+
+    </extensions>
+</idea-plugin>
