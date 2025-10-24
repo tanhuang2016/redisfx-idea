@@ -48,4 +48,13 @@
     <extensions defaultExtensionNs="com.intellij">
 
     </extensions>
+    <actions>
+        <action id="redisfx.tanh.idea.rdm.ui.PopupDialogAction"
+                class="redisfx.tanh.idea.rdm.ui.PopupDialogAction" text="Pop Dialog Action"
+                description="SDK action example22">
+            <override-text place="MainMenu" text="Popup Dialog Action"/>
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl T"/>
+        </action>
+    </actions>
 </idea-plugin>
