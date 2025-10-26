@@ -10,6 +10,8 @@ import com.intellij.openapi.actionSystem.toolbarLayout.ToolbarLayoutStrategy;
 import com.intellij.ui.components.JBPanel;
 import com.intellij.ui.treeStructure.Tree;
 import org.jetbrains.annotations.Nullable;
+import redisfx.tanh.idea.rdm.ui.action.AddAction;
+import redisfx.tanh.idea.rdm.ui.action.DeleteAction;
 import redisfx.tanh.idea.rdm.ui.util.GuiUtil;
 
 import javax.swing.*;
@@ -44,9 +46,9 @@ public class ToolWindows implements Disposable {
         CommonActionsManager actionManager = CommonActionsManager.getInstance();
         DefaultActionGroup actions = new DefaultActionGroup();
         // 增加key
-//        actions.add(createAddAction(connectionTree));
+        actions.add(createAddAction(connectionTree));
 //        // 删除key
-//        actions.add(createDeleteAction(connectionTree));
+        actions.add(createDeleteAction(connectionTree));
         actions.addSeparator();
         // 展开所有
         actions.add(actionManager.createExpandAllAction(GuiUtil.getTreeExpander(connectionTree), connectionTree));
@@ -58,6 +60,33 @@ public class ToolWindows implements Disposable {
     }
 
 
+    /**
+     * 创建添加按钮
+     *
+     * @return
+     */
+    private static AddAction createAddAction(Tree connectionTree) {
+        AddAction addAction = new AddAction();
+        addAction.setAction(e -> {
+            // 弹出连接配置窗口
+            System.out.println("add");
+        });
+        return addAction;
+    }
+
+    /**
+     * 创建移除按钮
+     *
+     * @return
+     */
+    private static DeleteAction createDeleteAction(Tree connectionTree) {
+        DeleteAction deleteAction = new DeleteAction();
+        deleteAction.setAction(e -> {
+            // 弹出删除确认对话框
+            System.out.println("delete");
+        });
+        return deleteAction;
+    }
 
     @Override
     public void dispose() {
