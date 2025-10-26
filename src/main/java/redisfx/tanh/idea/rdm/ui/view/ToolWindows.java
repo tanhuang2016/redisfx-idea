@@ -5,13 +5,15 @@ import com.intellij.ide.TreeExpander;
 import com.intellij.openapi.Disposable;
 import com.intellij.openapi.actionSystem.ActionManager;
 import com.intellij.openapi.actionSystem.ActionToolbar;
+import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.DefaultActionGroup;
 import com.intellij.openapi.actionSystem.toolbarLayout.ToolbarLayoutStrategy;
 import com.intellij.ui.components.JBPanel;
 import com.intellij.ui.treeStructure.Tree;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import redisfx.tanh.idea.rdm.ui.action.AddAction;
-import redisfx.tanh.idea.rdm.ui.action.DeleteAction;
+import redisfx.tanh.idea.rdm.ui.action.*;
+import redisfx.tanh.idea.rdm.ui.action.AbstractAction;
 import redisfx.tanh.idea.rdm.ui.util.GuiUtil;
 
 import javax.swing.*;
@@ -47,6 +49,8 @@ public class ToolWindows implements Disposable {
         DefaultActionGroup actions = new DefaultActionGroup();
         // 增加key
         actions.add(createAddAction(connectionTree));
+        actions.add(createAddFolderAction(connectionTree));
+        actions.add(createEditAction(connectionTree));
 //        // 删除key
         actions.add(createDeleteAction(connectionTree));
         actions.addSeparator();
@@ -57,6 +61,24 @@ public class ToolWindows implements Disposable {
         ActionToolbar actionToolbar = ActionManager.getInstance().createActionToolbar("ToolwindowToolbar", actions, true);
         actionToolbar.setLayoutStrategy(ToolbarLayoutStrategy.AUTOLAYOUT_STRATEGY);
         return actionToolbar;
+    }
+
+    private static @NotNull AnAction createEditAction(Tree connectionTree) {
+        AbstractAction action = new EditAction();
+        action.setAction(e -> {
+            // 弹出连接配置窗口
+            System.out.println("edit");
+        });
+        return action;
+    }
+
+    private static @NotNull AnAction createAddFolderAction(Tree connectionTree) {
+        AddFolderAction addAction = new AddFolderAction();
+        addAction.setAction(e -> {
+            // 弹出连接配置窗口
+            System.out.println("add");
+        });
+        return addAction;
     }
 
 
