@@ -46,8 +46,11 @@
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
-
+        <!--工具窗口 secondary指定是在主组还是次组栏中显示-->
+        <toolWindow factoryClass="redisfx.tanh.idea.rdm.ui.factory.RedisFXToolWindowFactory" id="RedisFX" secondary="false"
+                    icon="AllIcons.Debugger.Db_db_object" anchor="right"/>
     </extensions>
+
     <actions>
         <action id="redisfx.tanh.idea.rdm.ui.PopupDialogAction"
                 class="redisfx.tanh.idea.rdm.ui.PopupDialogAction" text="Pop Dialog Action"
