@@ -10,7 +10,9 @@ version = "1.0-SNAPSHOT"
 repositories {
     mavenCentral()
 }
-
+dependencies {
+    implementation("io.github.tanhuang2016:rdm-redis-imp:2.3.16.1")
+}
 // Configure Gradle IntelliJ Plugin
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
 intellij {

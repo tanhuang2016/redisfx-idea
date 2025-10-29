@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="redisfx.tanh.idea.rdm.ui.view.dialog.ConnectionForm">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <tabbedpane id="f881" binding="tabbedPane1" default-binding="true">
+        <constraints border-constraint="Center"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="67b89" layout-manager="BorderLayout" hgap="0" vgap="0">
+            <constraints>
+              <tabbedpane title="General"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <scrollpane id="40566">
+                <constraints border-constraint="Center"/>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="3cc73" layout-manager="FormLayout">
+                    <rowspec value="center:d:noGrow"/>
+                    <rowspec value="top:4dlu:noGrow"/>
+                    <rowspec value="center:max(d;4px):noGrow"/>
+                    <rowspec value="top:4dlu:noGrow"/>
+                    <rowspec value="center:max(d;4px):noGrow"/>
+                    <rowspec value="top:4dlu:noGrow"/>
+                    <rowspec value="center:max(d;4px):noGrow"/>
+                    <rowspec value="top:4dlu:noGrow"/>
+                    <rowspec value="center:max(d;4px):noGrow"/>
+                    <rowspec value="top:4dlu:noGrow"/>
+                    <rowspec value="center:max(d;4px):noGrow"/>
+                    <colspec value="fill:d:noGrow"/>
+                    <colspec value="left:4dlu:noGrow"/>
+                    <colspec value="fill:d:grow"/>
+                    <constraints/>
+                    <properties>
+                      <opaque value="false"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="75b31" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                          <forms/>
+                        </constraints>
+                        <properties>
+                          <text value="Name"/>
+                        </properties>
+                      </component>
+                      <component id="f37ba" class="javax.swing.JTextField" binding="name">
+                        <constraints>
+                          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                            <preferred-size width="150" height="-1"/>
+                          </grid>
+                          <forms defaultalign-horz="false"/>
+                        </constraints>
+                        <properties>
+                          <columns value="0"/>
+                        </properties>
+                      </component>
+                      <component id="83094" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                          <forms/>
+                        </constraints>
+                        <properties>
+                          <text value="Address"/>
+                        </properties>
+                      </component>
+                      <component id="d1f1b" class="javax.swing.JTextField" binding="host">
+                        <constraints>
+                          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                            <preferred-size width="150" height="-1"/>
+                          </grid>
+                          <forms defaultalign-horz="false"/>
+                        </constraints>
+                        <properties/>
+                      </component>
+                      <component id="a31d7" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                          <forms/>
+                        </constraints>
+                        <properties>
+                          <text value="Port啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊"/>
+                        </properties>
+                      </component>
+                      <component id="6d09" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+                        <constraints>
+                          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                            <preferred-size width="150" height="-1"/>
+                          </grid>
+                          <forms defaultalign-horz="false"/>
+                        </constraints>
+                        <properties/>
+                      </component>
+                      <component id="ad696" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                          <forms/>
+                        </constraints>
+                        <properties>
+                          <text value="Username"/>
+                        </properties>
+                      </component>
+                      <component id="a520a" class="javax.swing.JTextField" binding="textField2" default-binding="true">
+                        <constraints>
+                          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                            <preferred-size width="150" height="-1"/>
+                          </grid>
+                          <forms defaultalign-horz="false"/>
+                        </constraints>
+                        <properties/>
+                      </component>
+                      <component id="fdf29" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                          <forms/>
+                        </constraints>
+                        <properties>
+                          <text value="Auth"/>
+                        </properties>
+                      </component>
+                      <component id="18f12" class="javax.swing.JCheckBox" binding="clusterCheckBox" default-binding="true">
+                        <constraints>
+                          <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                          <forms defaultalign-horz="false"/>
+                        </constraints>
+                        <properties>
+                          <autoscrolls value="false"/>
+                          <text value="Cluster"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                </children>
+              </scrollpane>
+            </children>
+          </grid>
+          <grid id="209d3" layout-manager="BorderLayout" hgap="0" vgap="0">
+            <constraints>
+              <tabbedpane title="SSL"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children/>
+          </grid>
+          <grid id="8bd8e" layout-manager="BorderLayout" hgap="0" vgap="0">
+            <constraints>
+              <tabbedpane title="SSH Tunnel"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children/>
+          </grid>
+          <grid id="c2776" layout-manager="BorderLayout" hgap="0" vgap="0">
+            <constraints>
+              <tabbedpane title="Advanced"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children/>
+          </grid>
+        </children>
+      </tabbedpane>
+    </children>
+  </grid>
+</form>

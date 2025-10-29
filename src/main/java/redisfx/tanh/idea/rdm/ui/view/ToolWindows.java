@@ -15,6 +15,9 @@ import org.jetbrains.annotations.Nullable;
 import redisfx.tanh.idea.rdm.ui.action.*;
 import redisfx.tanh.idea.rdm.ui.action.AbstractAction;
 import redisfx.tanh.idea.rdm.ui.util.GuiUtil;
+import redisfx.tanh.rdm.redis.RedisConfig;
+import redisfx.tanh.rdm.redis.client.RedisClient;
+import redisfx.tanh.rdm.redis.imp.client.DefaultRedisClientCreator;
 
 import javax.swing.*;
 import javax.swing.tree.DefaultMutableTreeNode;
@@ -66,8 +69,14 @@ public class ToolWindows implements Disposable {
     private static @NotNull AnAction createEditAction(Tree connectionTree) {
         AbstractAction action = new EditAction();
         action.setAction(e -> {
+            RedisConfig config = new RedisConfig();
+            config.setHost("127.0.0.1");
+            config.setPort(6379);
+            DefaultRedisClientCreator creator = new DefaultRedisClientCreator(config);
+            RedisClient redisClient = creator.create();
+            String ping = redisClient.ping();
             // 弹出连接配置窗口
-            System.out.println("edit");
+            System.out.println("edit"+ping);
         });
         return action;
     }
