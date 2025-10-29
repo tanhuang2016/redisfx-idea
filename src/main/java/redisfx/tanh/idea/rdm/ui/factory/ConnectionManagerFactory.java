@@ -10,7 +10,7 @@ import com.intellij.ui.content.ContentManager;
 import org.jetbrains.annotations.NotNull;
 import redisfx.tanh.idea.rdm.ui.view.ToolWindows;
 
-public class RedisFXToolWindowFactory  implements ToolWindowFactory {
+public class ConnectionManagerFactory implements ToolWindowFactory {
 
     /**
      * 创建窗口内容
