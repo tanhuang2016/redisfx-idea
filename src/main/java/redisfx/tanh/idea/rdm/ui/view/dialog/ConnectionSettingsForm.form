@@ -89,7 +89,7 @@
                           <forms/>
                         </constraints>
                         <properties>
-                          <text value="Port啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊"/>
+                          <text value="Port"/>
                         </properties>
                       </component>
                       <component id="6d09" class="javax.swing.JTextField" binding="port">
