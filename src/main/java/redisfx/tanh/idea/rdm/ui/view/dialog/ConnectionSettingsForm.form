@@ -53,7 +53,7 @@
                           <forms/>
                         </constraints>
                         <properties>
-                          <text value="Name"/>
+                          <text value="Name:"/>
                         </properties>
                       </component>
                       <component id="f37ba" class="javax.swing.JTextField" binding="name">
@@ -73,7 +73,7 @@
                           <forms/>
                         </constraints>
                         <properties>
-                          <text value="Address"/>
+                          <text value="Address:"/>
                         </properties>
                       </component>
                       <component id="d1f1b" class="javax.swing.JTextField" binding="host">
@@ -91,7 +91,7 @@
                           <forms/>
                         </constraints>
                         <properties>
-                          <text value="Port"/>
+                          <text value="Port:"/>
                         </properties>
                       </component>
                       <component id="6d09" class="javax.swing.JTextField" binding="port">
@@ -109,7 +109,7 @@
                           <forms/>
                         </constraints>
                         <properties>
-                          <text value="Username"/>
+                          <text value="Username:"/>
                         </properties>
                       </component>
                       <component id="a520a" class="javax.swing.JTextField" binding="userName">
@@ -129,7 +129,7 @@
                           <forms/>
                         </constraints>
                         <properties>
-                          <text value="Auth"/>
+                          <text value="Auth:"/>
                         </properties>
                       </component>
                       <component id="b078b" class="javax.swing.JPasswordField" binding="auth">
@@ -187,7 +187,7 @@
                               <forms/>
                             </constraints>
                             <properties>
-                              <text value="Master Name"/>
+                              <text value="Master name:"/>
                             </properties>
                           </component>
                           <component id="9e556" class="javax.swing.JTextField" binding="masterName">
@@ -205,7 +205,7 @@
                               <forms/>
                             </constraints>
                             <properties>
-                              <text value="Master Node Password"/>
+                              <text value="Master node password:"/>
                             </properties>
                           </component>
                           <component id="cb33c" class="javax.swing.JPasswordField" binding="masterAuth">
