@@ -13,7 +13,7 @@ public class ConnectionSettingsDialog extends DialogWrapper implements Disposabl
     public ConnectionSettingsDialog(@Nullable Project project) {
         super(project);
         this.setTitle("Connection Settings");
-        this.setSize(100, 100);
+        this.setSize(500, 350);
         init();
     }
 

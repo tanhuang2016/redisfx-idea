@@ -1,5 +1,7 @@
 package redisfx.tanh.idea.rdm.ui.view.dialog;
 
+import com.intellij.ui.components.JBScrollPane;
+
 import javax.swing.*;
 
 public class ConnectionSettingsForm {
@@ -14,8 +16,11 @@ public class ConnectionSettingsForm {
 
 
     public JComponent getContent() {
-        generalScrollPane.setBorder(null);
-//        generalScrollPane.setViewportBorder(null);
         return rootPane;
+    }
+
+    private void createUIComponents() {
+        generalScrollPane = new JBScrollPane();
+        generalScrollPane.setBorder(null);
     }
 }
