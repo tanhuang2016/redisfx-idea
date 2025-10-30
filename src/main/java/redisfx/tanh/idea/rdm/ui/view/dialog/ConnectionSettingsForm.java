@@ -28,6 +28,18 @@ public class ConnectionSettingsForm {
             public void stateChanged(ChangeEvent e) {
                 boolean isSelected = sentinelCheckBox.isSelected();
                 sentinelPanel.setVisible(isSelected);
+                if(isSelected){
+                    clusterCheckBox.setSelected(false);
+                }
+            }
+        });
+        clusterCheckBox.addChangeListener(new ChangeListener() {
+            @Override
+            public void stateChanged(ChangeEvent e) {
+                boolean isSelected = clusterCheckBox.isSelected();
+                if(isSelected){
+                    sentinelCheckBox.setSelected(false);
+                }
             }
         });
     }
