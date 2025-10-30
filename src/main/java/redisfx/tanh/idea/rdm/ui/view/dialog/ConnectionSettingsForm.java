@@ -11,9 +11,12 @@ public class ConnectionSettingsForm {
     private JTextField host;
     private JTextField port;
     private JTextField auth;
-    private JCheckBox clusterCheckBox;
     private JScrollPane generalScrollPane;
     private JPasswordField password;
+    private JCheckBox clusterCheckBox;
+    private JCheckBox sentinelCheckBox;
+    private JTextField masterName;
+    private JPasswordField passwordField1;
 
 
     public JComponent getContent() {
