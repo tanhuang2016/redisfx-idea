@@ -112,14 +112,16 @@
                           <text value="Username"/>
                         </properties>
                       </component>
-                      <component id="a520a" class="javax.swing.JTextField" binding="auth">
+                      <component id="a520a" class="javax.swing.JTextField" binding="userName">
                         <constraints>
                           <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
                           </grid>
                           <forms defaultalign-horz="false"/>
                         </constraints>
-                        <properties/>
+                        <properties>
+                          <text value=""/>
+                        </properties>
                       </component>
                       <component id="fdf29" class="javax.swing.JLabel">
                         <constraints>
@@ -130,7 +132,7 @@
                           <text value="Auth"/>
                         </properties>
                       </component>
-                      <component id="b078b" class="javax.swing.JPasswordField" binding="password">
+                      <component id="b078b" class="javax.swing.JPasswordField" binding="auth">
                         <constraints>
                           <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -206,7 +208,7 @@
                               <text value="Master Node Password"/>
                             </properties>
                           </component>
-                          <component id="cb33c" class="javax.swing.JPasswordField" binding="passwordField1" default-binding="true">
+                          <component id="cb33c" class="javax.swing.JPasswordField" binding="masterAuth">
                             <constraints>
                               <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                                 <preferred-size width="150" height="-1"/>
