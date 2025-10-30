@@ -1,7 +1,6 @@
 package redisfx.tanh.idea.rdm.ui.view;
 
 import com.intellij.ide.CommonActionsManager;
-import com.intellij.ide.TreeExpander;
 import com.intellij.openapi.Disposable;
 import com.intellij.openapi.actionSystem.ActionManager;
 import com.intellij.openapi.actionSystem.ActionToolbar;
@@ -22,8 +21,6 @@ import redisfx.tanh.rdm.redis.client.RedisClient;
 import redisfx.tanh.rdm.redis.imp.client.DefaultRedisClientCreator;
 
 import javax.swing.*;
-import javax.swing.tree.DefaultMutableTreeNode;
-import javax.swing.tree.TreePath;
 import java.awt.*;
 
 public class ToolWindows implements Disposable {
@@ -55,11 +52,11 @@ public class ToolWindows implements Disposable {
         CommonActionsManager actionManager = CommonActionsManager.getInstance();
         DefaultActionGroup actions = new DefaultActionGroup();
         // 增加key
-        actions.add(createAddAction(connectionTree));
-        actions.add(createAddFolderAction());
-        actions.add(createEditAction(connectionTree));
+        actions.add(addAction());
+        actions.add(addFolderAction());
+        actions.add(editAction());
 //        // 删除key
-        actions.add(createDeleteAction(connectionTree));
+        actions.add(deleteAction());
         actions.addSeparator();
         // 展开所有
         actions.add(actionManager.createExpandAllAction(GuiUtil.getTreeExpander(connectionTree), connectionTree));
@@ -70,7 +67,7 @@ public class ToolWindows implements Disposable {
         return actionToolbar;
     }
 
-    private static @NotNull AnAction createEditAction(Tree connectionTree) {
+    private  @NotNull AnAction editAction() {
         AbstractAction action = new EditAction();
         action.setAction(e -> {
             RedisConfig config = new RedisConfig();
@@ -91,7 +88,7 @@ public class ToolWindows implements Disposable {
         return action;
     }
 
-    private  @NotNull AnAction createAddFolderAction() {
+    private  @NotNull AnAction addFolderAction() {
         AddFolderAction addAction = new AddFolderAction();
         addAction.setAction(e -> {
             ConnectionSettingsDialog connectionSettingsDialog = new ConnectionSettingsDialog(project);
@@ -108,7 +105,7 @@ public class ToolWindows implements Disposable {
      *
      * @return
      */
-    private static AddAction createAddAction(Tree connectionTree) {
+    private  AddAction addAction() {
         AddAction addAction = new AddAction();
         addAction.setAction(e -> {
             // 弹出连接配置窗口
@@ -122,7 +119,7 @@ public class ToolWindows implements Disposable {
      *
      * @return
      */
-    private static DeleteAction createDeleteAction(Tree connectionTree) {
+    private  DeleteAction deleteAction() {
         DeleteAction deleteAction = new DeleteAction();
         deleteAction.setAction(e -> {
             // 弹出删除确认对话框
