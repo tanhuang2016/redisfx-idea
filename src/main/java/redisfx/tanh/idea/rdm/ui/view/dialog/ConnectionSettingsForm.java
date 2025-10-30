@@ -13,6 +13,7 @@ public class ConnectionSettingsForm {
     private JTextField auth;
     private JCheckBox clusterCheckBox;
     private JScrollPane generalScrollPane;
+    private JPasswordField password;
 
 
     public JComponent getContent() {
