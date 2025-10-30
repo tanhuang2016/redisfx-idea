@@ -10,18 +10,23 @@ import javax.swing.*;
 
 public class ConnectionSettingsDialog extends DialogWrapper implements Disposable {
 
-    protected ConnectionSettingsDialog(@Nullable Project project, boolean canBeParent) {
-        super(project, canBeParent);
+    public ConnectionSettingsDialog(@Nullable Project project) {
+        super(project);
+        this.setTitle("Connection Settings");
+        this.setSize(650, 240);
+        init();
     }
 
     @Override
     protected @Nullable JComponent createCenterPanel() {
-        return null;
+        ConnectionSettingsForm form = new ConnectionSettingsForm();
+        JComponent content = form.getContent();
+        return content;
     }
 
     @Override
     public void dispose() {
-
+        super.dispose();
     }
 
 }

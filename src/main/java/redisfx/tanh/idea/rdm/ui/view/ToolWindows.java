@@ -8,6 +8,7 @@ import com.intellij.openapi.actionSystem.ActionToolbar;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.DefaultActionGroup;
 import com.intellij.openapi.actionSystem.toolbarLayout.ToolbarLayoutStrategy;
+import com.intellij.openapi.project.Project;
 import com.intellij.ui.components.JBPanel;
 import com.intellij.ui.treeStructure.Tree;
 import org.jetbrains.annotations.NotNull;
@@ -15,6 +16,7 @@ import org.jetbrains.annotations.Nullable;
 import redisfx.tanh.idea.rdm.ui.action.*;
 import redisfx.tanh.idea.rdm.ui.action.AbstractAction;
 import redisfx.tanh.idea.rdm.ui.util.GuiUtil;
+import redisfx.tanh.idea.rdm.ui.view.dialog.ConnectionSettingsDialog;
 import redisfx.tanh.rdm.redis.RedisConfig;
 import redisfx.tanh.rdm.redis.client.RedisClient;
 import redisfx.tanh.rdm.redis.imp.client.DefaultRedisClientCreator;
@@ -31,13 +33,15 @@ public class ToolWindows implements Disposable {
      */
     private JPanel connectionPanel;
     private Tree connectionTree;
+    private Project project;
 
 
-    public ToolWindows() {
+    public ToolWindows(Project project) {
+        this.project = project;
         this.connectionPanel = new JBPanel<>(new BorderLayout());;
         this.connectionTree = new Tree();
         // 创建工具栏并添加到面板顶部，传入 content ，便于改 displayName
-        ActionToolbar actionToolbar = createConnectionActionToolbar(connectionTree);
+        ActionToolbar actionToolbar = createConnectionActionToolbar();
         // 将工具栏关联到面板
         actionToolbar.setTargetComponent(connectionPanel);
         connectionPanel.add(actionToolbar.getComponent(), BorderLayout.NORTH);
@@ -46,13 +50,13 @@ public class ToolWindows implements Disposable {
     /**
      * 创建连接管理工具栏
      */
-    private static ActionToolbar createConnectionActionToolbar(Tree connectionTree) {
+    private  ActionToolbar createConnectionActionToolbar( ) {
         // 工具栏
         CommonActionsManager actionManager = CommonActionsManager.getInstance();
         DefaultActionGroup actions = new DefaultActionGroup();
         // 增加key
         actions.add(createAddAction(connectionTree));
-        actions.add(createAddFolderAction(connectionTree));
+        actions.add(createAddFolderAction());
         actions.add(createEditAction(connectionTree));
 //        // 删除key
         actions.add(createDeleteAction(connectionTree));
@@ -72,6 +76,12 @@ public class ToolWindows implements Disposable {
             RedisConfig config = new RedisConfig();
             config.setHost("127.0.0.1");
             config.setPort(6379);
+            config.setSsl( false);
+            config.setSsh(false);
+            config.setCluster(false);
+            config.setSentinel(false);
+            config.setConnectionTimeout(6000);
+            config.setSoTimeout(6000);
             DefaultRedisClientCreator creator = new DefaultRedisClientCreator(config);
             RedisClient redisClient = creator.create();
             String ping = redisClient.ping();
@@ -81,9 +91,11 @@ public class ToolWindows implements Disposable {
         return action;
     }
 
-    private static @NotNull AnAction createAddFolderAction(Tree connectionTree) {
+    private  @NotNull AnAction createAddFolderAction() {
         AddFolderAction addAction = new AddFolderAction();
         addAction.setAction(e -> {
+            ConnectionSettingsDialog connectionSettingsDialog = new ConnectionSettingsDialog(project);
+            connectionSettingsDialog.show();
             // 弹出连接配置窗口
             System.out.println("add");
         });

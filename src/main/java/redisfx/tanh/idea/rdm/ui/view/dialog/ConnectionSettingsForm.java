@@ -2,12 +2,17 @@ package redisfx.tanh.idea.rdm.ui.view.dialog;
 
 import javax.swing.*;
 
-public class ConnectionForm {
+public class ConnectionSettingsForm {
     private JTabbedPane tabbedPane1;
     private JPanel panel1;
     private JTextField name;
     private JTextField host;
-    private JTextField textField1;
-    private JTextField textField2;
+    private JTextField port;
+    private JTextField auth;
     private JCheckBox clusterCheckBox;
+
+
+    public JComponent getContent() {
+        return panel1;
+    }
 }

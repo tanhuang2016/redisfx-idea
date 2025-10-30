@@ -14,7 +14,7 @@ public  class DataBrowserFactory implements ToolWindowFactory {
 
     @Override
     public void createToolWindowContent(@NotNull Project project, @NotNull ToolWindow toolWindow) {
-        ToolWindows toolWindows = new ToolWindows();
+        ToolWindows toolWindows = new ToolWindows(project);
         ContentManager contentManager = toolWindow.getContentManager();
 //        contentManager.getFactory().createContent(toolWindows.content(),"", true); 使用下面这种老方式，兼容旧版本idea
         ContentFactory contentFactory = ApplicationManager.getApplication().getService(ContentFactory.class);
