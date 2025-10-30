@@ -161,7 +161,7 @@
                           </component>
                         </children>
                       </grid>
-                      <grid id="6535a" layout-manager="FormLayout">
+                      <grid id="6535a" binding="sentinelPanel" layout-manager="FormLayout">
                         <rowspec value="center:d:grow"/>
                         <rowspec value="top:4dlu:noGrow"/>
                         <rowspec value="center:d:noGrow"/>
@@ -174,7 +174,9 @@
                           <grid row="12" column="0" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                           <forms/>
                         </constraints>
-                        <properties/>
+                        <properties>
+                          <visible value="false"/>
+                        </properties>
                         <border type="none"/>
                         <children>
                           <component id="d007c" class="javax.swing.JLabel">
