@@ -94,7 +94,7 @@ public class ToolWindows implements Disposable {
             ConnectionSettingsDialog connectionSettingsDialog = new ConnectionSettingsDialog(project);
             connectionSettingsDialog.show();
             // 弹出连接配置窗口
-            System.out.println("add");
+            System.out.println("addf");
         });
         return addAction;
     }

@@ -30,4 +30,9 @@ public class ConnectionSettingsDialog extends DialogWrapper implements Disposabl
         super.dispose();
     }
 
+    @Override
+    protected void doOKAction() {
+        super.doOKAction();
+        System.out.println(123);
+    }
 }
