@@ -16,10 +16,10 @@ dependencies {
 // Configure Gradle IntelliJ Plugin
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
 intellij {
-    localPath.set("E:\\jbr\\ideaIC-2024.1.7")
+//    localPath.set("E:\\jbr\\ideaIC-2024.1.7")
     downloadSources.set(false)
     updateSinceUntilBuild.set(false)
-//    version.set("2024.1.7")
+    version.set("2024.1.7")
 //    type.set("IC") // Target IDE Platform
 //
 //    plugins.set(listOf(/* Plugin Dependencies */))
